@@ -1,0 +1,33 @@
+-# Multipart (documentacion)
+= form_for(sound, :remote => true, :format => [:js], :html => {:id => "new_sound", :multipart => true}) do |f|
+  %table.new_sound_panel#new_sound_panel
+    %tr
+      %td.record
+        .record_button{:id => "sound_microphone_#{Time.now.to_i}"}
+          %i.icon-microphone
+        %a#audio-file{:style => 'display:none;', :href => '#'}
+
+  :javascript
+    // Inicia la recogida de Audio. No volvemos a pedir permisos si ya los hemos pedido una vez
+    if (typeof(audioContext) == 'undefined') { init_record_audio(); }
+    
+    $("#sound_microphone_#{Time.now.to_i}").click(function() {
+      if ($(this).hasClass('recording')) {
+        if (check_if_can_record()) {
+          stop_record_audio("new_sound_#{sound.id}");
+          $("#sound_microphone_#{Time.now.to_i}").removeClass("recording"); 
+          prepare_for_modal_loading('Creando sound. Por favor, espere..');
+        } else {
+          alert('Primero debes aceptar los permisos de tu navegador. Es un símbolo con una cámara. Está situado en una esquina de la barra de direcciones.')
+          }
+      } else {
+        if (check_if_can_record()) {
+          $("#sound_microphone_#{Time.now.to_i}").addClass("recording");
+          recording = true;
+          check_if_still_recording($("#sound_microphone_#{Time.now.to_i}"));
+          start_record_audio();
+        } else {
+          alert('Primero debes aceptar los permisos de tu navegador.\nEs un símbolo con una cámara. Está situado en una esquina de la barra de direcciones.')
+          }
+      }
+    });
