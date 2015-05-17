@@ -1,0 +1,106 @@
+// Color
+$green_letter: #83B32B;
+$green_letter_dark: #77A228;
+$light_green_letter: #56D656;
+$blue_letter: #8DC6DA;
+
+// a
+$link_default: #427B8F;
+$link_default_hover:#52ACDA;
+
+// Header
+$header_color: rgba(27, 24, 19, 0.9);
+
+// Bacground and blocks
+$background_normal: #505050;
+$main_block: #D7D7D7;
+$inside_block: #CCCCCC;
+$inside_sub_block: #C5C5C5;
+
+$text_color: #3D3D3D;
+
+$background_header_hover: rgba(189, 189, 189, 0.5);
+
+
+//KEYFRAMES
+@keyframes recording {
+  0% {
+    background-color:#3D3D3D;
+    box-shadow: 0px 0px 10px 2px #FFFFFF;
+    color: #FFFFFF;
+
+  }
+
+  100% {
+    background-color: #3D3D3D;
+    box-shadow: 0px 0px 10px 2px #F20402;
+    color: #F20402;
+
+  }
+}
+
+@-webkit-keyframes -webkit-recording {
+  0% {
+    background-color:#3D3D3D;
+    box-shadow: 0px 0px 10px 2px #FFFFFF;
+    color: #FFFFFF;
+  }
+
+  100% {
+    background-color: #3D3D3D;
+    box-shadow: 0px 0px 10px 2px #F20402;
+    color: #F20402;
+  }
+}
+
+@keyframes spinner-loop {
+ 0% { transform: rotate(0deg) }
+ 12% { transform: rotate(45deg) }
+ 25% { transform: rotate(90deg) }
+ 37% { transform: rotate(135deg) }
+ 50% { transform: rotate(180deg) }
+ 62% { transform: rotate(225deg) }
+ 75% { transform: rotate(270deg) }
+ 100% { transform: rotate(320deg) }
+}
+
+@-webkit-keyframes -webkit-spinner-loop {
+ 0% { -webkit-transform: rotate(0deg) }
+ 12% { -webkit-transform: rotate(45deg) }
+ 25% { -webkit-transform: rotate(90deg) }
+ 37% { -webkit-transform: rotate(135deg) }
+ 50% { -webkit-transform: rotate(180deg) }
+ 62% { -webkit-transform: rotate(225deg) }
+ 75% { -webkit-transform: rotate(270deg) }
+ 100% { -webkit-transform: rotate(320deg) }
+}
+
+
+// En un futuro (Fondos molones)
+@keyframes color_one {
+  0%    { opacity:0.8; }
+  17%   { opacity:0.4; }
+  34%   { opacity:0; }
+  51%   { opacity:0; }
+  68%   { opacity:0; }
+  85%   { opacity:0; }
+  100%  { opacity:0.8; }
+}
+@keyframes color_two {
+  0%    { opacity:0; }
+  17%   { opacity:0; }
+  34%   { opacity:0.8; } 
+  51%   { opacity:0.4; }
+  68%   { opacity:0; }
+  85%   { opacity:0; }
+  100%  { opacity:0; }
+}
+@keyframes pinky_three {
+  0%    { opacity:0; }
+  17%   { opacity:0; }
+  34%   { opacity:0; }
+  51%   { opacity:0; }
+  68%   { opacity:0.8; }
+  85%   { opacity:0.4; }
+  100%  { opacity:0; }
+}

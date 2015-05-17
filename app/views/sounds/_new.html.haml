@@ -4,7 +4,7 @@
     %tr
       %td.record
         .record_button{:id => "sound_microphone_#{Time.now.to_i}"}
-          %i.icon-microphone
+          .fa.fa-microphone
         %a#audio-file{:style => 'display:none;', :href => '#'}
 
   :javascript
@@ -16,7 +16,6 @@
         if (check_if_can_record()) {
           stop_record_audio("new_sound_#{sound.id}");
           $("#sound_microphone_#{Time.now.to_i}").removeClass("recording"); 
-          prepare_for_modal_loading('Creando sound. Por favor, espere..');
         } else {
           alert('Primero debes aceptar los permisos de tu navegador. Es un símbolo con una cámara. Está situado en una esquina de la barra de direcciones.')
           }

@@ -1,9 +1,8 @@
-.col-md-8.col-md-offset-2.col-xs-4.col-sm-12.text-center
-  %h1.text-center{:style => 'margin-bottom: 40px;'} Web Audio API
-  %ul.nav.nav-pills.nav-justified
-    %li{role: "alteration", class: @nav.eql?("alteration") ? 'active' : nil}
-      = link_to('Alteration', alteration_path) 
+%h1.text-center{:style => 'margin-bottom: 40px;'} Web Audio API
+%ul.nav.nav-pills.nav-justified
+  %li{role: "alteration", class: @nav.eql?("alteration") ? 'active' : nil}
+    = link_to('Alteration', alteration_path) 
 
-    %li{role: "generation", class: @nav.eql?("generation") ? 'active' : nil}
-      = link_to('Generation', generation_path) 
+  %li{role: "generation", class: @nav.eql?("generation") ? 'active' : nil}
+    = link_to('Generation', generation_path) 
 

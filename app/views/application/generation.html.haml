@@ -1,4 +1,6 @@
 #main_container
-  = render :partial => 'header', :locals => {:nav => @nav}
-
-  = render :partial => 'sounds/new', :locals => {:sound => @sound}
+  .col-md-8.col-md-offset-2.col-xs-4.col-sm-12.text-center
+    = render :partial => 'header', :locals => {:nav => @nav}
+    
+    %div{:style => 'padding-top: 10px;'}
+      = render :partial => 'sounds/new', :locals => {:sound => @sound}

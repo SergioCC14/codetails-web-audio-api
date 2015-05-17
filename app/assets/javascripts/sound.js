@@ -58,7 +58,7 @@ function start_record_audio() {
 function stop_record_audio(form_id) {
   audioRecorder.stop();
   saveAudio();
-  
+
   setTimeout(
       function() {
         uploadForm(form_id)
@@ -97,15 +97,15 @@ function saveAudio() {
 }
 
 function doneEncoding( blob ) {
-    Recorder.setupDownload( blob, "psnq" + ((recIndex<10)?"0":"") + recIndex + ".wav" );
+    Recorder.setupDownload( blob, "sound" + ((recIndex<10)?"0":"") + recIndex + ".wav" );
     recIndex++;
 }
 
 // Para la subida del fichero
 function uploadForm(form_id) {
   setTimeout( function() {
-    var form = new FormData(document.getElementById(form_id));
-    form.append("sound[audio]", getsound_audio(), "sound_" + "_" + Date.now() + ".wav");
+    var form = new FormData(document.getElementById("new_sound"));
+    form.append("sound[audio]", getSound_audio(), "sound_" + "_" + Date.now() + ".wav");
     var request = new XMLHttpRequest();
     var async = true;
 
