@@ -123,17 +123,17 @@ table.new_sound_panel {
       .record_button {
       display: inline-block;
       padding: 5px;
-      width: 60px;
-      height: 60px;
+      width: 120px;
+      height: 120px;
       position: relative;
       background-color: $light_green_letter;
       color: #3D3D3D;
-      border-radius: 35px;
+      border-radius: 60px;
       .fa {
         position: absolute;
-        font-size: 45px;
-        left: 15px;
-        top: 8px;
+        font-size: 90px;
+        left: 30px;
+        top: 15px;
       }
     }
     .record_button.recording {

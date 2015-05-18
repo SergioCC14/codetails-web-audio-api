@@ -4,6 +4,11 @@
     
     %div{:style => 'padding-top: 10px;'}
       = render :partial => 'sounds/new', :locals => {:sound => @sound}
-    
-    %div.col-md-8.col-md-offset-2.col-xs-4.col-sm-12.text-center#sounds_index{:style => 'padding-top: 10px;'}
+
+    %div.col-md-4.col-md-offset-4.col-xs-2.col-sm-8.text-center#sounds_index{:style => 'padding-top: 10px;'}
       = render :partial => 'sounds/index', :locals => {:sounds => @sounds}
+
+    :javascript
+      function playSound(audio_id) {
+        audio_id.get(0).play();
+      }

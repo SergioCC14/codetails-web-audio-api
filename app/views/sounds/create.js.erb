@@ -1,1 +1,1 @@
-$("#new_sound_hollow").html("<%= escape_javascript render(:partial => 'sounds/show', :locals => {:sound => @sound) %>");
+$("#sounds_index").html('<%= escape_javascript render(:partial => "sounds/index", :locals => {:sounds => @sounds}) %>');

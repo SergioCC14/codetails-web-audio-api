@@ -143,7 +143,7 @@ function check_if_still_recording(btn) {
     if ((btn.hasClass('recording')) && (recording == true)) {
       btn.click();
     }
-  }, 9000 ); 
+  }, 60000 ); 
   
 
 

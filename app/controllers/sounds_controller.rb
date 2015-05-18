@@ -46,7 +46,8 @@ class SoundsController < ApplicationController
     # Luego lo creamos
 
     if (@sound = Sound.create(sound_params))
-
+      @sounds = Sound.all
+      
       respond_to do |format|
         format.html { redirect_to home_path, notice: 'sound was successfully updated.' }
         format.js { render }
