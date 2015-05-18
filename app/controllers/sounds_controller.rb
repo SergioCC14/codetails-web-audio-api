@@ -7,7 +7,7 @@ class SoundsController < ApplicationController
   # GET /sounds.json
   def index
     respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.json { render json: @sounds }
     end
   end
@@ -46,7 +46,7 @@ class SoundsController < ApplicationController
     # Luego lo creamos
 
     if (@sound = Sound.create(sound_params))
-      @sounds = Sound.all
+      @sounds = Sound.recorded
 
       respond_to do |format|
         format.html { redirect_to instantfun_path, notice: 'sound was successfully updated.' }
