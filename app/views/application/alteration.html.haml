@@ -1,3 +1,7 @@
 #main_container
   .col-md-8.col-md-offset-2.col-xs-4.col-sm-12.text-center
     = render :partial => 'header', :locals => {:nav => @nav}
+
+
+  %div.col-md-4.col-md-offset-4.col-xs-2.col-sm-8.text-center{:style => 'padding-top: 10px;'}
+    %H2=link_to('HTML5rocks (Boris Smus)', "http://www.html5rocks.com/en/tutorials/webaudio/intro/")

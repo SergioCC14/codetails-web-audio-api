@@ -47,9 +47,9 @@ class SoundsController < ApplicationController
 
     if (@sound = Sound.create(sound_params))
       @sounds = Sound.all
-      
+
       respond_to do |format|
-        format.html { redirect_to home_path, notice: 'sound was successfully updated.' }
+        format.html { redirect_to instantfun_path, notice: 'sound was successfully updated.' }
         format.js { render }
       end
     else
@@ -71,7 +71,7 @@ class SoundsController < ApplicationController
 
   private
     def sound_params
-      params.require(:sound).permit(:audio)
+      params.require(:sound).permit(:audio, :title)
     end
 
 end

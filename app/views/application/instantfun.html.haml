@@ -1,0 +1,9 @@
+#main_container
+  .col-md-8.col-md-offset-2.col-xs-4.col-sm-12.text-center
+    = render :partial => 'header', :locals => {:nav => @nav}
+    
+    %div{:style => 'padding: 40px;'}
+      = render :partial => 'sounds/instantfun_index', :locals => {:sounds => @sounds}
+
+    %div{:style => 'padding-top: 10px;'}
+      = render :partial => 'sounds/instantfun_new', :locals => {:sound => @sound}

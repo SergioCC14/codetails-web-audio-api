@@ -1,0 +1,8 @@
+%hr
+= form_for(sound, :html => {:id => "new_sound", :multipart => true}) do |f|
+  .form-group.form-inline
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+    = f.label :audio
+    = f.file_field :audio, class: 'form-control'
+    = f.submit 'Send', class: "btn btn-primary"

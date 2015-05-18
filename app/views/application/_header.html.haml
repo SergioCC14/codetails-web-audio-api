@@ -4,5 +4,7 @@
     = link_to('Alteration', alteration_path) 
 
   %li{role: "generation", class: @nav.eql?("generation") ? 'active' : nil}
-    = link_to('Generation', generation_path) 
+    = link_to('Generation', generation_path)
 
+  %li{role: "instantfun", class: @nav.eql?("instantfun") ? 'active' : nil}
+    = link_to('Instafun!', instantfun_path)

@@ -1,0 +1,9 @@
+:javascript
+  function playSound(audio_id) {
+    audio_id.get(0).play();
+  }
+%table.table.table-striped
+  - @sounds.find_each do |s|
+    = render :partial => 'sounds/instantfund_show', :locals => {:sound => s}
+
+

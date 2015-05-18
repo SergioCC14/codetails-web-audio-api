@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   # Audio Alteration
   def alteration
     @nav = "alteration"
+    @sound = Sound.new
     
   end
 
@@ -15,6 +16,12 @@ class ApplicationController < ActionController::Base
     @nav = "generation"
     @sound = Sound.new
     @sounds = Sound.all
+  end
+
+  def instantfun
+    @nav = "instantfun"
+    @sounds = Sound.instafuns
+    @sound = Sound.new
   end
 
 end
