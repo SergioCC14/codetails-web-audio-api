@@ -1,0 +1,16 @@
+%tr#new_sound_hollow{:style => 'display:none'}
+%tr
+  %td
+    %audio{:id => "sound_audio_#{sound.id}", :style => 'display:none'}
+      %source{:src => sound.audio.url(:original), :type => sound.audio.content_type}
+    .fa.fa-play{:id => "sound_play_#{sound.id}"}
+  %td
+    .duration{:id => "sound_duration_#{sound.id}"}="-"
+
+:javascript
+  $("#sound_play_#{sound.id}").click(function() { 
+    playSound($("#sound_audio_#{sound.id}"))
+  });
+  setTimeout( function() {
+    $("#sound_duration_#{sound.id}").text(parseInt($("#sound_audio_#{sound.id}").get(0).duration) + "\"")
+  }, 500 );

@@ -4,3 +4,6 @@
     
     %div{:style => 'padding-top: 10px;'}
       = render :partial => 'sounds/new', :locals => {:sound => @sound}
+    
+    %div.col-md-8.col-md-offset-2.col-xs-4.col-sm-12.text-center#sounds_index{:style => 'padding-top: 10px;'}
+      = render :partial => 'sounds/index', :locals => {:sounds => @sounds}

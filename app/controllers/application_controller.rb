@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   def generation
     @nav = "generation"
     @sound = Sound.new
+    @sounds = Sound.all
   end
 
 end
